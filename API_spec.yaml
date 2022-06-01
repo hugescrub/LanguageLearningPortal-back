@@ -1,0 +1,232 @@
+openapi: "3.0.3"
+info:
+  title: "LLP_0_1_6 API"
+  description: "LLP_0_1_6 API"
+  version: "1.0.0"
+servers:
+  - url: "https://LLP_0_1_6"
+paths:
+  /api/teachers/add:
+    post:
+      summary: "POST api/teachers/add"
+      operationId: "addTeacher"
+      responses:
+        "200":
+          description: "OK"
+  /api/teachers/all:
+    get:
+      summary: "GET api/teachers/all"
+      operationId: "getAllTeachers"
+      responses:
+        "200":
+          description: "OK"
+  /api/teachers/all/{id}:
+    get:
+      summary: "GET api/teachers/all/{id}"
+      operationId: "getCoursesByTeacher"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/teachers/delete/{id}:
+    delete:
+      summary: "DELETE api/teachers/delete/{id}"
+      operationId: "deleteTeacher"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/teachers/unapproved:
+    get:
+      summary: "GET api/teachers/unapproved"
+      operationId: "getUnapproved"
+      responses:
+        "200":
+          description: "OK"
+  /api/teachers/update:
+    post:
+      summary: "POST api/teachers/update"
+      operationId: "updateTeacher"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/admin:
+    get:
+      summary: "GET api/courses/admin"
+      operationId: "adminAccess"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/all:
+    get:
+      summary: "GET api/courses/all"
+      operationId: "getAllCourses"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/create/{id}:
+    post:
+      summary: "POST api/courses/create/{id}"
+      operationId: "createCourse"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/delete/{id}:
+    delete:
+      summary: "DELETE api/courses/delete/{id}"
+      operationId: "deleteCourse"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/teacher:
+    get:
+      summary: "GET api/courses/teacher"
+      operationId: "teacherAccess"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/update/{id}:
+    post:
+      summary: "POST api/courses/update/{id}"
+      operationId: "updateCourse"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/courses/user:
+    get:
+      summary: "GET api/courses/user"
+      operationId: "userAccess"
+      responses:
+        "200":
+          description: "OK"
+  /api/enrollment/save/{id}:
+    post:
+      summary: "POST api/enrollment/save/{id}"
+      operationId: "saveEnrollment"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/auth/refreshtoken:
+    post:
+      summary: "POST api/auth/refreshtoken"
+      operationId: "refreshtoken"
+      responses:
+        "200":
+          description: "OK"
+  /api/auth/signin:
+    post:
+      summary: "POST api/auth/signin"
+      operationId: "authenticateUser"
+      responses:
+        "200":
+          description: "OK"
+  /api/auth/signout:
+    post:
+      summary: "POST api/auth/signout"
+      operationId: "logoutUser"
+      responses:
+        "200":
+          description: "OK"
+  /api/auth/signup:
+    post:
+      summary: "POST api/auth/signup"
+      operationId: "registerUser"
+      responses:
+        "200":
+          description: "OK"
+  /api/students/all:
+    get:
+      summary: "GET api/students/all"
+      operationId: "getAllStudents"
+      responses:
+        "200":
+          description: "OK"
+  /api/students/details:
+    get:
+      summary: "GET api/students/details"
+      operationId: "userInfo"
+      responses:
+        "200":
+          description: "OK"
+  /api/students/profile:
+    get:
+      summary: "GET api/students/profile"
+      operationId: "getUserCourses"
+      responses:
+        "200":
+          description: "OK"
+  /api/lessons/all:
+    get:
+      summary: "GET api/lessons/all"
+      operationId: "getAllLessons"
+      responses:
+        "200":
+          description: "OK"
+  /api/lessons/all/{id}:
+    get:
+      summary: "GET api/lessons/all/{id}"
+      operationId: "getAllLessonsByCourse"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
+  /api/lessons/create/{id}:
+    post:
+      summary: "POST api/lessons/create/{id}"
+      operationId: "createLesson"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+          schema:
+            type: "number"
+            format: "int64"
+      responses:
+        "200":
+          description: "OK"
