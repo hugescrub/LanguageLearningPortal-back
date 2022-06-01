@@ -1,7 +1,8 @@
 # LanguageLearningPortal-back
 A backend part for a language learning web platform.
 ## Prequisites
-Maven
+Apache Maven 3.8+
+
 JDK 1.8+
 ## Running
 1. Log into your MySQL server
