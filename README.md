@@ -1,4 +1,4 @@
-# LanguageLearninPortal-back
+# LanguageLearningPortal-back
 A backend part for a language learning web platform.
 `Before launch, make sure you have Maven and JVM installed`
 1. Log into your MySQL server
